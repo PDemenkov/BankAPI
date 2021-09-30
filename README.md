@@ -2,8 +2,8 @@ post json
 User
 ```
 {
-  "name" : "Den",
-  "surname" : "Den",
+  "name" : "Name",
+  "surname" : "Surname",
   "accounts" : [{
     "accountNumber" : "42355523",
     "balance" : 999999,
@@ -45,5 +45,13 @@ add CounterParty
     ]}
   ]}
   ```
+  
+  transfer
+  
+  {
+"counterPartyId" : "2",
+"amount" : 10000
+}
+
   
   
