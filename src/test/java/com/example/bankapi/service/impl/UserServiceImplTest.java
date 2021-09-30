@@ -26,20 +26,20 @@ class UserServiceImplTest {
     private CardMapper cardMapper = mock(CardMapper.class);
     private AccountDAO accountDAO = mock(AccountDAO.class);
     private CardDAO cardDAO = mock(CardDAO.class);
-    private UserService userService = new UserServiceImpl(userDAO,userMapper,cardMapper,accountDAO,cardDAO);
+    private UserService userService = new UserServiceImpl(userDAO, userMapper, cardMapper, accountDAO, cardDAO);
 
     @Test
     void getAllUsers() {
         when(userDAO.getAllUsers()).thenReturn(emptyList());
         List<UserDTO> test = userService.getAllUsers();
-        assertEquals(0,test.size());
+        assertEquals(0, test.size());
         verify(userDAO).getAllUsers();
     }
 
 
     @Test
     void getUserById() {
-        UserDTO userDTO = new UserDTO(1,"Test","Test", emptyList(),emptyList());
+        UserDTO userDTO = new UserDTO(1, "Test", "Test", emptyList(), emptyList());
         when(userMapper.toDTO(any())).thenReturn(userDTO);
         userService.getUserById(1);
         verify(userDAO).getUserById(1);
@@ -47,8 +47,8 @@ class UserServiceImplTest {
 
     @Test
     void addUser() {
-        User user = new User(1,"Test","Test",emptyList(),emptyList());
-        UserDTO userDTO = new UserDTO(1,"Test","Test",emptyList(),emptyList());
+        User user = new User(1, "Test", "Test", emptyList(), emptyList());
+        UserDTO userDTO = new UserDTO(1, "Test", "Test", emptyList(), emptyList());
         when(userMapper.toEntity(any())).thenReturn(user);
         userService.addUser(userDTO);
         verify(userMapper).toEntity(userDTO);
@@ -60,18 +60,9 @@ class UserServiceImplTest {
         when(accountDAO.getAllAccounts(1)).thenReturn(emptyList());
         cardDAO.getAllCards(1);
         List<CardDTO> test = userService.getAllCards(1);
-        assertEquals(0,test.size());
+        assertEquals(0, test.size());
         verify(cardDAO).getAllCards(1);
 
     }
-
-//    @Test
-//    void addCash() {
-//        int amount = 500;
-//        Account account = new Account(1,"12345",500,emptyList());
-//        userService.addCash(1,500);
-//        verify(accountDAO).addCash(500,account);
-//
-//    }
 
 }

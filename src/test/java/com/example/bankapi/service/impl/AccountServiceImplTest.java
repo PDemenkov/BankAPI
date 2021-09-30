@@ -53,21 +53,4 @@ class AccountServiceImplTest {
         verify(accountDAO).addAccount(1,account);
     }
 
-//    @Test
-//    void addCard() {
-//        Card card = new Card(1,"Test", "Test","Test");
-//        CardDTO cardDTO = new CardDTO(1, "Test", "test", "test");
-//        when(cardMapper.toEntity(any())).thenReturn(card);
-//        accountService.addCard(1,cardDTO);
-//        verify(cardDAO).addCard(1, card);
-//        verify(cardMapper).toEntity(cardDTO);
-//    }
-
-//    @Test
-//    void getBalance() {
-//        when(accountService.getBalance(1)).thenReturn(1000);
-//        int test = accountService.getBalance(1);
-//        verify(accountDAO).getBalance(1);
-//        assertEquals(1000, test);
-//    }
 }
