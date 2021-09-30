@@ -1,6 +1,6 @@
 package com.example.bankapi.service.impl;
 
-import lombok.SneakyThrows;
+
 import org.junit.jupiter.api.Test;
 import com.example.bankapi.dao.AccountDAO;
 import com.example.bankapi.dao.CardDAO;
@@ -36,7 +36,7 @@ class UserServiceImplTest {
         verify(userDAO).getAllUsers();
     }
 
-    @SneakyThrows
+
     @Test
     void getUserById() {
         UserDTO userDTO = new UserDTO(1,"Test","Test", emptyList(),emptyList());
