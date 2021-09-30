@@ -21,7 +21,7 @@ User
   ]}
   ```
   
-  add Card
+  post Card
   ```
   {
 "cardNumber" : "3333 4444 4444 3333",
@@ -30,7 +30,7 @@ User
 }
 ```
 
-add CounterParty
+post CounterParty
 ```
 {
   "name" : "CounterP2",
@@ -46,7 +46,7 @@ add CounterParty
   ]}
   ```
   
-  transfer
+ post transfer
   ```
   {
 "counterPartyId" : "2",
