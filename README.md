@@ -47,11 +47,11 @@ add CounterParty
   ```
   
   transfer
-  
+  ```
   {
 "counterPartyId" : "2",
 "amount" : 10000
 }
-
+```
   
   
